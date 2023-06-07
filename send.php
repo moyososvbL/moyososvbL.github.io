@@ -29,14 +29,13 @@ if(isset($_POST["send"])){
 
 		$mail->send();
 
-		header("Location: contact");
-		exit();
+		
 
 	echo
 	"
     <script>
         alert('sucessful');
-        document.location.href = 'index.php'
+        document.location.href = 'index.html'
     </script >
 
     ";
