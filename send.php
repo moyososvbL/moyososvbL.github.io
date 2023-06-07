@@ -22,15 +22,18 @@ if(isset($_POST["send"])){
 
 			        $mail->addAddress('codecrafter530@gmail.com');
 
-			        $mail->isHTML(true);
+		$mail->isHTML(true);
 
-				    $mail->Subject = $_POST["subject"];
-				    $mail->Body = $_POST["message"] . "\n" . $_POST["email"];
+		$mail->Subject = $_POST["subject"];
+		$mail->Body = $_POST["message"] . "\n" . $_POST["email"];
 
-				        $mail->send();
+		$mail->send();
 
-				        echo
-						    "
+		header("Location: contact");
+		exit();
+
+	echo
+	"
     <script>
         alert('sucessful');
         document.location.href = 'index.php'
