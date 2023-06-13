@@ -25,7 +25,7 @@ if(isset($_POST["send"])){
 		$mail->isHTML(true);
 
 		$mail->Subject = $_POST["subject"];
-		$mail->Body = $_POST["message"] . "\n" . $_POST["email"];
+		$mail->Body = $_POST["message"] . "<br>" . $_POST["email"];
 
 		$mail->send();
 
@@ -41,5 +41,10 @@ if(isset($_POST["send"])){
     ";
 
 } 
+
+
+
+
+
 
 ?>
